@@ -1,0 +1,336 @@
+#cards_seelies {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: play, sans-serif;
+  margin-left: 5%;
+  margin-right: 3%;
+
+  p {
+    font-size: 1.5em;
+    text-align: center;
+    font-style: italic;
+    color: var(--lightGreen);
+    width: 20%;
+    margin-right: 20px;
+  }
+
+  span {
+    color: #e2b95b;
+  }
+
+  .seelies_cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2%;
+    padding-left: 25px;
+    cursor: pointer;
+  }
+}
+
+//Bouton pour afficher les filtres en format mobile//
+.filter-button-container {
+  display: none;
+
+  .articles-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: AbhaBold, sans-serif;
+    color: var(--lightGreen);
+  }
+}
+
+// Containeur contenant tous les inputs pour filter et les articles///////////////////////////
+.main_container_filtres {
+  display: flex;
+  border: 2px solid #bdc9ac;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 50px;
+}
+
+// Containeur contenant tous les inputs pour filter les articles///////////////////////////
+.filtres_container {
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid var(--lightGreen);
+  color: var(--lightGreen);
+  min-height: 100%;
+  padding: 5% 2% 5% 2%;
+  gap: 30px;
+  font-family: play, sans-serif;
+
+  // Titre du conteneur contanant tous les inputs de filtre/////////////////////
+  .filters_title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: AbhaBold, sans-serif;
+  }
+
+  // Conteneur barre de recherche////////////////
+  .searchBar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+
+    .input_search {
+      height: 100%;
+      width: 100%;
+      border: solid 2px;
+      color: var(--lightGreen);
+      padding-left: 40px;
+      background: url("../assets/loupe.svg") no-repeat left center;
+      background-size: 24px 24px;
+      background-position: 5px;
+    }
+
+    .input_search::placeholder {
+      color: var(--lightGreen);
+      font-size: 1rem;
+    }
+  }
+  ///////////Conteneur des inputs et titre des Prix, Thematique, Types et couleurs/////////////////////////////////////////////////////
+  .filtre_container {
+    margin-top: 30px;
+  }
+
+  .filtre_title {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    font-family: AbhaBold, sans-serif;
+    gap: 3px;
+    font-size: 1.1rem;
+  }
+
+  // Input Prix/////////
+  .label_price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+
+  .input_range {
+    width: 100%;
+    accent-color: var(--orange);
+  }
+
+  // Input Thématique/////////
+  .thematique_buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    .thematique_button {
+      background-color: var(--darkPink);
+      color: var(--lightGreen);
+      border: 2px solid var(--lightGreen);
+      height: 50px;
+      font-family: play, sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:focus {
+        background-color: var(--lightGreen);
+        color: var(--darkPink);
+      }
+    }
+  }
+  // Input Types/////////
+  .types_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .type_button {
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      background-color: var(--darkPink);
+      color: var(--darkPink);
+      border: 1px solid var(--lightGreen);
+
+      &:focus {
+        background-color: var(--lightGreen);
+        color: var(--lightGreen);
+      }
+    }
+  }
+
+  // Input couleurs/////////
+  .colors_buttons {
+    // display: grid;
+    // grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    .color_button {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+
+      &:focus {
+        border: 2px solid var(--lightGreen);
+      }
+    }
+  }
+
+  // Bouton pour annuler les filtres des articles/////////
+  .remove-filter-button {
+    background-color: var(--darkPink);
+    color: var(--lightGreen);
+    border: 2px solid var(--lightGreen);
+    height: 60px;
+    font-family: play, sans-serif;
+
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin: 50px auto;
+
+    &:active {
+      background-color: var(--lightGreen);
+      color: var(--darkPink);
+    }
+  }
+}
+
+// Container des articles/////////
+.view_articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 2% auto;
+}
+
+// Articles/////////
+.view_articles .article-container {
+  background-color: var(--bg-color);
+  color: var(--color);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  .article-ligne {
+    background-color: var(--color);
+  }
+
+  .article-prix {
+    background-color: #442332;
+    border: 1px solid #bdc9ac;
+    color: #bdc9ac;
+  }
+
+  .article-logo path {
+    stroke: var(--color);
+  }
+}
+
+// .seelies_cards .sellerCardContainerAlternate {
+// margin: auto;
+
+// }
+
+.clickableZoneToDetails {
+  cursor: pointer;
+  z-index: 200;
+  position: absolute;
+  padding: 5em;
+  height: 325px;
+  width: 220px;
+  margin-left: 25px;
+  border-radius: 200px 200px 0 0;
+}
+
+@media screen and (max-width: 800px) {
+  #cards_seelies {
+    display: block;
+
+    p {
+      width: 100%;
+      font-size: 1.3rem;
+      margin: auto;
+      text-align: center;
+    }
+
+    .seelies_cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  .filter-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 50px auto;
+
+    .line-article-title {
+      width: 80%;
+      height: 1px;
+      background-color: var(--lightGreen);
+      margin-bottom: 8px;
+    }
+
+    .filter-button {
+      background-color: var(--darkPink);
+      color: var(--lightGreen);
+      border: 2px solid var(--lightGreen);
+      height: 60px;
+      font-family: play, sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 50%;
+
+      &:active {
+        background-color: var(--lightGreen);
+        color: var(--darkPink);
+      }
+    }
+  }
+
+  //Filtres masqués//
+  .main_container_filtres {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 0px;
+
+    .filtres_container {
+      display: none;
+    }
+
+    .view_articles {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid var(--lightGreen);
+      align-items: center;
+      padding: 20px;
+      width: 100%;
+    }
+  }
+
+  //Filtres visibles//
+  .filter-active {
+    .filtres_container {
+      display: block;
+      border: 2px solid var(--lightGreen);
+
+      img {
+        width: 90%;
+      }
+    }
+  }
+}

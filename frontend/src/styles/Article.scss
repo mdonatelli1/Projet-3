@@ -1,0 +1,163 @@
+/* ----- Seelies ----- */
+
+.Dahlia {
+  --bg-color: #e2b95b;
+  --color: #442332;
+}
+.Doireann {
+  --bg-color: #4e5c2c;
+  --color: #bdc9ac;
+}
+.Achlys {
+  --bg-color: #df824d;
+  --color: #442332;
+}
+.Elya {
+  --bg-color: #8d214c;
+  --color: #bdc9ac;
+}
+/* ------------------- */
+
+.article-container {
+  border: 2px solid var(--bg-color);
+  color: #442332;
+
+  /* TAILLE */
+  height: 298.14px;
+  width: 269px;
+
+  /* FLEX */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /* GAP */
+  gap: 0.5rem;
+
+  /* POSITION */
+  margin-top: 110px;
+  position: relative;
+
+  .article-image {
+    object-fit: cover;
+
+    /* TAILLE */
+    min-height: 271.03px;
+    width: 84%;
+
+    /* ARRIERE PLAN */
+    background-color: var(--bg-color);
+    border-radius: 200px 200px 0 0;
+    padding: 2px;
+  }
+
+  .article-titre-container {
+    /* TAILLE */
+    min-height: 3rem;
+    max-height: 3rem;
+    max-width: 29ch;
+
+    /* FLEX */
+    display: flex;
+    align-items: center;
+
+    .article-titre {
+      text-align: center;
+
+      /* FONT */
+      font-size: 18px;
+      font-family: "Abha", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+
+  p {
+    font-family: "Play", serif;
+    font-weight: 400;
+  }
+
+  .article-ligne-container {
+    width: 32%;
+
+    .article-ligne {
+      background-color: #442332;
+
+      /* TAILLE */
+      height: 1px;
+      width: 100%;
+
+      /* POSITION */
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  p {
+    font-style: italic;
+    text-align: center;
+
+    /* TAILLE DE LA POLICE */
+    font-size: 1rem;
+  }
+
+  .article-prix {
+    background-color: var(--bg-color);
+    border: 1px solid var(--bg-color);
+    color: var(--color);
+
+    /* CREATION D'UNE "BOITE" */
+    min-height: 34px;
+    width: 116px;
+
+    /* FLEX */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* TAILLE DE LA POLICE */
+    font-size: 18px;
+  }
+
+  .article-logos {
+    position: absolute;
+    right: 8px;
+    bottom: -8px;
+
+    .article-logo {
+      cursor: pointer;
+
+      /* POSITION */
+      margin-bottom: 8px;
+
+      /* FLEX */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      path {
+        stroke: var(--bg-color);
+      }
+    }
+  }
+}
+
+/* HOVER */
+
+.article-container:hover {
+  background-color: var(--bg-color);
+  color: var(--color);
+
+  .article-ligne {
+    background-color: var(--color);
+  }
+
+  .article-prix {
+    background-color: #442332;
+    border: 1px solid #bdc9ac;
+    color: #bdc9ac;
+  }
+
+  .article-logo path {
+    stroke: var(--color);
+  }
+}

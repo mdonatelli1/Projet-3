@@ -1,0 +1,97 @@
+.articles-admin {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px 0px;
+
+  .img-article {
+    border-radius: 200px 200px 0px 0px;
+    width: 150px;
+    padding: 3px;
+    background-color: #4e5c2c;
+  }
+
+  .Elya {
+    background-color: #8d214c;
+  }
+
+  .Dalhia {
+    background-color: #e2b95b;
+  }
+  .Doireann {
+    background-color: #4e5c2c;
+  }
+  .Achlys {
+    background-color: #df824d;
+  }
+
+  .info_articles_admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    // width: 400px;
+    gap: 15px;
+
+    .article-admin-nom {
+      font-size: 1.2rem;
+      width: 200px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .line-info-article {
+      border: 1px solid var(--lightGreen);
+      width: 50%;
+    }
+  }
+
+  .prix_article_admin {
+    font-size: 1.3rem;
+  }
+}
+.end-line {
+  display: flex;
+  margin: 5px auto;
+  align-items: center;
+  border: 1px solid var(--lightGreen);
+  width: 90%;
+}
+
+.vendu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-vendu {
+  color: #e2b95b;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.article-nombre-vendu {
+  border: 1px solid var(--lightGreen);
+  color: #e2b95b;
+  padding-block: 5px;
+  padding-inline: 40px;
+  font-size: 1.5rem;
+}
+
+.admin-cadre {
+  border: 1px solid var(--lightGreen);
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+.admin-img {
+  height: 25px;
+  width: 25px;
+  margin: 5px;
+  margin-block: 15px;
+  background-color: transparent;
+}

@@ -1,0 +1,130 @@
+#mes-favoris {
+  h2 {
+    background-color: var(--lightGreen);
+    color: var(--darkPink);
+
+    // POSITION
+    margin-bottom: 35px;
+    text-align: center;
+
+    // TAILLE
+    width: fit-content;
+    margin: 15px auto;
+    padding: 15px 90px;
+
+    // FONT
+    font-family: "Antic", serif;
+  }
+
+  .fav-ligne-h {
+    background-color: var(--lightGreen);
+
+    // TAILLE
+    height: 1px;
+    width: 100%;
+  }
+
+  #favs {
+    // POSITION
+    margin: 25px auto;
+
+    // FLEX
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .fav {
+      color: var(--lightGreen);
+
+      // GRID
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 25px;
+
+      .infos {
+        grid-column: 1 / 4;
+
+        // FLEX
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+
+        h3 {
+          // FLEX
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          // TAILLE
+          height: 50px;
+          max-width: 20ch;
+
+          // FONT
+          font-family: "Abha", serif;
+        }
+
+        p {
+          border: 1px solid var(--lightGreen);
+
+          // FLEX
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          // TAILLE
+          height: 35px;
+          width: 116px;
+
+          // FONT
+          font-family: "Play", serif;
+        }
+      }
+
+      .logos {
+        grid-column: 4 / 6;
+
+        // FLEX
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .fav-ligne-v {
+          background-color: var(--lightGreen);
+
+          // TAILLE
+          height: 1px;
+          width: 35%;
+
+          // POSITION
+          transform: rotate(90deg);
+        }
+
+        .article-logos {
+          // TAILLE
+          height: 100%;
+          width: 100%;
+
+          // FLEX
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 25px;
+
+          .article-logo {
+            cursor: pointer;
+
+            /* FLEX */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            path {
+              stroke: var(--lightGreen);
+            }
+          }
+        }
+      }
+    }
+  }
+}

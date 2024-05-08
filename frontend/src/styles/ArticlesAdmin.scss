@@ -1,0 +1,194 @@
+#admin-catalogue {
+  color: var(--lightGreen);
+  font-family: "Antic", serif;
+
+  margin: 50px;
+
+  width: max-content;
+
+  h2 {
+    color: var(--darkPink);
+    background-color: var(--lightGreen);
+
+    padding: 10px 200px;
+    width: fit-content;
+
+    font-size: 20px;
+
+    margin-bottom: 40px;
+  }
+
+  button {
+    cursor: pointer;
+
+    color: var(--lightGreen);
+    background-color: var(--darkPink);
+
+    font-size: 16px;
+
+    margin-right: 30px;
+    padding: 20px 30px;
+
+    border: 1px solid var(--lightGreen);
+  }
+  button.noborder {
+    border: none;
+  }
+
+  #admin-articles-list {
+    position: relative;
+
+    margin-top: 20px;
+    padding: 50px;
+
+    border: 2px solid var(--lightGreen);
+
+    button {
+      background-color: var(--pink);
+      padding: 0 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      span {
+        font-size: 50px;
+      }
+    }
+
+    #search {
+      position: absolute;
+      right: 50px;
+
+      padding: 10px 50px 10px 200px;
+
+      background-color: var(--darkPink);
+      border: 1px solid var(--lightGreen);
+      color: var(--lightGreen);
+
+      font-size: 14px;
+      font-family: "Antic", serif;
+
+      background: url("../assets/loupe.png") no-repeat;
+      background-position: right 25px center;
+    }
+
+    #admin-list {
+      height: 762px;
+      overflow-y: scroll;
+      scrollbar-color: var(--lightGreen) rgba(189, 201, 172, 29%);
+      scrollbar-width: thin;
+
+      display: flex;
+      flex-direction: column;
+      color: var(--lightGreen);
+    }
+  }
+}
+
+#admin-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 25%);
+
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#addArticle {
+  position: fixed;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+
+  height: 811px;
+  width: 819px;
+
+  color: var(--darkPink);
+  background-color: var(--lightGreen);
+
+  font-family: "Antic", serif;
+
+  .admin-ligne {
+    height: 1px;
+    width: 80%;
+
+    background-color: var(--darkPink);
+
+    text-align: center;
+  }
+
+  form {
+    height: 100%;
+    width: 100%;
+
+    padding: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    #admin-modal-left {
+      grid-area: 0 / 1;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      #admin-modal-price {
+        display: flex;
+        gap: 10px;
+      }
+
+      #admin-modal-types {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+
+    #admin-modal-right {
+      grid-area: 1 / 2;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      #admin-modal-thematiques {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      button {
+        cursor: pointer;
+
+        background-color: var(--pink);
+        color: var(--lightGreen);
+
+        height: 72px;
+        width: 278px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+
+        font-size: 20px;
+        font-family: "Antic", serif;
+      }
+    }
+  }
+}

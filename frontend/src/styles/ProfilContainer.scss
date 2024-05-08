@@ -1,0 +1,13 @@
+// ici on gere le container des 2 grands blocks menu profil a gauche et le bloc cadre a droite juste leur dispositions
+
+.profil-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (max-width: 1170px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}

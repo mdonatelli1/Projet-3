@@ -1,0 +1,19 @@
+.title_page {
+  display: flex;
+  flex-direction: column;
+  font-family: AbhaBold;
+  color: var(--lightGreen);
+  font-size: 2rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 900px) {
+  .title_page {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 40px 0px;
+  }
+}

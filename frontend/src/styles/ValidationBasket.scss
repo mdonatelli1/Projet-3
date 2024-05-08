@@ -1,0 +1,61 @@
+.firstBorder {
+  border: 1px solid var(--lightGreen);
+  width: 300px;
+  height: 500px;
+  margin: 20px;
+  align-self: center;
+  .secondBorder {
+    margin: 17px 10px 0px 10px;
+    border: 1px solid var(--lightGreen);
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+    justify-content: center;
+    .quantityBasket {
+      font-family: "Play", sans-serif;
+      color: var(--lightGreen);
+      font-size: 25px;
+    }
+    .ligneBasket {
+      border: 1px solid var(--lightGreen);
+      width: 70%;
+    }
+    .totalBasket {
+      font-family: "Antic", sans-serif;
+      color: var(--lightGreen);
+      font-size: 23px;
+    }
+    .paymentBasket {
+      color: var(--darkPink);
+      font-family: "Antic", sans-serif;
+      cursor: pointer;
+      padding: 20px 30px;
+      border: none;
+      font-size: 18px;
+      border-radius: 45px;
+      text-transform: uppercase;
+      transition: 0.5s;
+      transition-property: box-shadow;
+      background: var(--lightGreen);
+      width: auto;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      margin-left: 10px;
+      transition:
+        0.3s,
+        background-color 0.3s;
+
+      &:hover {
+        background: var(--lightGreen);
+        box-shadow: 0 0 20px rgb(189, 201, 172);
+        transform: translateY(-3px);
+      }
+      &:active {
+        background-color: var(--lightGreen);
+        transform: translateY(-10px);
+      }
+    }
+  }
+}

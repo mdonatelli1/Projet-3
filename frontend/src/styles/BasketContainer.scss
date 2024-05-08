@@ -1,0 +1,118 @@
+#basketContainer {
+  align-self: center;
+  width: 70%;
+
+  #basketDetail {
+    border: 1px solid var(--lightGreen);
+    width: 90%;
+    position: relative;
+
+    #basketHeading {
+      display: flex;
+      align-items: center;
+      background-color: var(--lightGreen);
+      border-radius: 50px 0 0 0;
+      position: absolute;
+      bottom: 100%;
+      left: -1px;
+      width: 50%;
+
+      #basketLogo {
+        background-color: var(--darkPink);
+        border-radius: 50%;
+        height: 10cqh;
+        aspect-ratio: 50/50;
+        border: 1px solid var(--lightGreen);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          transform: translateY(5px);
+        }
+      }
+
+      h1 {
+        text-transform: uppercase;
+        font:
+          4vw AbhaBold,
+          sans-serif;
+        color: var(--darkPink);
+        margin: 0 auto;
+      }
+    }
+
+    #basketFilter {
+      display: flex;
+      position: relative;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      color: var(--lightGreen);
+      font:
+        1.8rem Antic,
+        sans-serif;
+      height: calc(1.8rem * 4);
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 1px solid var(--lightGreen);
+      }
+
+      :nth-child(2) {
+        margin-left: 26%;
+      }
+    }
+
+    #basketContent {
+      display: flex;
+      flex-direction: column;
+      height: 60vh;
+      padding: 1% 3%;
+      overflow-y: scroll;
+      scrollbar-color: var(--lightGreen) rgba(189, 201, 172, 29%);
+      scrollbar-width: thin;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #basketContainer {
+    margin-top: 25%;
+    margin-left: 8%;
+    width: 86%;
+    height: 70%;
+  }
+
+  #basketHeading {
+    top: 0;
+
+    h1 {
+      display: none;
+    }
+  }
+
+  #basketFilter {
+    visibility: hidden;
+  }
+
+  .article-panier-container .quantity {
+    margin: 10px auto;
+    width: 30%;
+    position: relative;
+    right: 2%;
+  }
+
+  .article-panier-container .prix_article_panier {
+    margin: 10px auto;
+    position: relative;
+    right: 2%;
+  }
+
+  main.firstBorder {
+    width: 77%;
+  }
+}

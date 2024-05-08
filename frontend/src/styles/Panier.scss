@@ -1,0 +1,41 @@
+.basket-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.basket-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100vh;
+  padding: 20px;
+}
+
+.basket-validation-ok {
+  height: 100vh;
+  padding: 20px;
+}
+
+.basket-noAccessMain {
+  min-height: 40vh;
+}
+
+.basket-noAccessCont {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  color: var(--yellow);
+  font-family: "Play", sans-serif;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 800px) {
+  .basket-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}

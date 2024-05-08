@@ -1,0 +1,134 @@
+#nouveautés {
+  background-color: #bdc9ac;
+
+  // POSITION
+  position: relative;
+  margin: 100px 0;
+
+  // TAILLE
+  padding: 50px;
+
+  #ivyNew > :nth-child(1) {
+    // POSITION
+    position: absolute;
+    top: -7vh;
+    left: 0;
+  }
+
+  #ivyNew > :nth-child(2) {
+    // POSITION
+    position: absolute;
+    bottom: 0;
+    transform: translateY(40%);
+    right: 0;
+    z-index: -1;
+  }
+
+  #nouveautés-content {
+    border: 3px solid #8d214c;
+
+    // TAILLE
+    padding: 50px;
+
+    #nouveautés-title {
+      background: linear-gradient(
+        180deg,
+        rgba(141, 33, 76, 1) 38%,
+        rgba(68, 35, 50, 1) 80%
+      );
+      background-clip: text;
+      color: transparent;
+
+      // FONT
+      font-family: "Abha", serif;
+      font-size: clamp(2rem, 3vw, 76px);
+
+      // POSITION
+      text-align: center;
+      margin: 5vh auto;
+    }
+
+    #nouveautés-articles {
+      // FLEX
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 50px;
+
+      button {
+        background-color: #8d214c;
+        border: none;
+        color: #bdc9ac;
+        cursor: pointer;
+
+        // FONT
+        font-family: "Antic", serif;
+        font-size: 19px;
+
+        // FLEX
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // TAILLE
+        height: 73px;
+        width: 232px;
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 912px) {
+  #nouveautés {
+    #nouveautés-content {
+      #nouveautés-title {
+        // POSITION
+        margin-left: auto;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 793px) {
+  #nouveautés {
+    #nouveautés-content {
+      #nouveautés-articles {
+        // FLEX
+        flex-direction: column;
+      }
+    }
+
+    #ivyNew > :nth-child(1) {
+      // TAILLE
+      scale: 0.7;
+
+      // POSITION
+      top: -6rem;
+      left: -5.5rem;
+    }
+
+    #ivyNew > :nth-child(2) {
+      // POSITION
+      position: absolute;
+      bottom: 0;
+      transform: translateY(40%);
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  #nouveautés {
+    // TAILLE
+    padding: 50px 0;
+
+    #nouveautés-content {
+      // TAILLE
+      padding: 50px 0;
+    }
+  }
+}

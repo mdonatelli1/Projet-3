@@ -1,0 +1,138 @@
+.clients-list-main-container {
+  display: flex;
+  background-color: var(--darkPink);
+  color: var(--lightGreen);
+  font-family: "Antic", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 3%;
+
+  h2 {
+    background-color: var(--lightGreen);
+    color: var(--darkPink);
+    width: 39%;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: "Antic", sans-serif;
+    padding: 10px 30px;
+  }
+}
+
+.clients-list-container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--lightGreen);
+  padding: 10px 15px;
+}
+
+.filters-clients-list {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    background-color: var(--darkPink);
+    color: var(--lightGreen);
+    border: 1px solid var(--lightGreen);
+    height: 64px;
+    position: relative;
+    left: +10%;
+    width: 18%;
+    cursor: pointer;
+  }
+
+  .input_search {
+    height: 50px;
+    border: solid 2px;
+    color: var(--lightGreen);
+    padding-right: 40px;
+    background: url("../assets/loupe.svg") no-repeat right;
+    background-size: 24px 24px;
+    background-position: right 20px center;
+    padding-left: 200px;
+    position: relative;
+    top: 35px;
+  }
+
+  .input_search::placeholder {
+    color: var(--lightGreen);
+    font-size: 1rem;
+  }
+}
+
+.clients-list-array-labels {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid var(--lightGreen);
+    border-bottom: 1px solid var(--lightGreen);
+    padding: 2% 5%;
+    margin: 2% 0%;
+    gap: 15px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 1.2em;
+  }
+}
+
+.clients-list-details {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+  height: 600px;
+  overflow-y: scroll;
+  scrollbar-color: var(--lightGreen) rgba(189, 201, 172, 29%);
+  scrollbar-width: thin;
+
+  ul {
+    color: var(--lightGreen);
+    background-color: var(--lightGreen);
+    margin: 7px;
+    padding-left: 6%;
+    padding-right: 6%;
+
+    :nth-child(4) {
+      position: relative;
+      left: 1%;
+    }
+
+    li {
+      color: var(--darkPink);
+      padding: 10px 0px;
+      width: 10%;
+      text-align: center;
+      font-size: 1.2em;
+      position: relative;
+      left: -5%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .clients-list-main-container {
+    width: 90%;
+
+    h2 {
+      width: fit-content;
+      margin: 30px auto;
+    }
+
+    .filters-clients-list {
+      flex-direction: column;
+      align-items: center;
+
+      .input_search {
+        width: 100%;
+      }
+
+      button {
+        width: 50%;
+        left: 0;
+      }
+    }
+  }
+}

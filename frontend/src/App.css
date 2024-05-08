@@ -1,0 +1,47 @@
+@font-face {
+  font-family: Antic;
+  src: url("./assets/fonts/AnticSlab-Regular.ttf");
+}
+
+@font-face {
+  font-family: AbhaBold;
+  src: url("./assets/fonts/AbhayaLibre-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: AbhaReg;
+  src: url("./assets/fonts/AbhayaLibre-Regular.ttf");
+}
+
+@font-face {
+  font-family: Play;
+  src: url("./assets/fonts/PlayfairDisplay-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: PlaySemiBoldItalic;
+  src: url("./assets/fonts/PlayfairDisplay-SemiBoldItalic.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green: #4e5c2c;
+  --yellow: #e2b95b;
+  --pink: #8d214c;
+  --darkPink: #442332;
+  --orange: #df824d;
+  --lightGreen: #bdc9ac;
+}
+
+html {
+  background: var(--darkPink);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+  /* Le position relative est important ici , le overflow ne fonctionne pas sur mobile sans ça */
+}

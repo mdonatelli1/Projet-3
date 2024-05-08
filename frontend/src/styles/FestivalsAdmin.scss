@@ -1,0 +1,129 @@
+.fest-admin-cont {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 100%;
+
+  .fest-admin-title {
+    color: var(--darkPink);
+    font-family: "Antic", serif;
+    text-transform: uppercase;
+    background-color: var(--lightGreen);
+    padding: 10px 100px;
+    width: fit-content;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .btn-fest-add {
+    cursor: pointer;
+    width: 30%;
+    color: var(--lightGreen);
+    background-color: var(--darkPink);
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    border: 1px solid var(--lightGreen);
+    margin: 20px;
+  }
+  .btn-fest-add:hover {
+    content: "";
+    background-color: var(--lightGreen);
+    color: var(--darkPink);
+  }
+  .input-fest-admin {
+    width: 20%;
+    height: 3rem;
+    color: var(--lightGreen);
+    background-color: var(--darkPink);
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid var(--lightGreen);
+    margin: 20px;
+  }
+
+  .btn-fest-save,
+  .btn-fest-cancel {
+    cursor: pointer;
+    border: 1px solid var(--darkPink);
+    padding: 5px;
+    color: var(--darkPink);
+    background-color: var(--lightGreen);
+    margin-right: 5px;
+  }
+
+  #array-fest-container {
+    padding: 40px;
+    max-height: 300px;
+    border: 2px solid;
+    font-family: "Antic", sans-serif;
+    border-color: var(--lightGreen);
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    overflow: scroll;
+    scrollbar-color: var(--lightGreen) rgba(189, 201, 172, 29%);
+    scrollbar-width: thin;
+
+    .btn-fest-delete {
+      cursor: pointer;
+      border: 1px solid var(--darkPink);
+      padding: 5px;
+      color: var(--darkPink);
+      background-color: var(--lightGreen);
+    }
+    .btn-fest-edit {
+      cursor: pointer;
+      border: 1px solid var(--darkPink);
+      padding: 5px;
+      color: var(--darkPink);
+      background-color: var(--lightGreen);
+      margin-right: 5px;
+    }
+  }
+
+  #array-fest-data tr {
+    height: 50px;
+    width: 10rem;
+    text-align: center;
+    background-color: var(--lightGreen);
+  }
+  #array-fest-data td {
+    height: 50px;
+    width: 10rem;
+    text-align: center;
+    background-color: var(--lightGreen);
+  }
+
+  #array-fest-container th {
+    width: 30px;
+    position: relative;
+    padding: 20px;
+    color: var(--lightGreen);
+    font-family: "Antic", sans-serif;
+  }
+
+  th::before,
+  th::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--lightGreen);
+  }
+
+  th::before {
+    top: -2px;
+  }
+
+  th::after {
+    bottom: -2px;
+  }
+  #array-fest-container td {
+    width: 30px;
+    position: relative;
+    padding: 20px;
+    color: var(--darkPink);
+    font-family: "Antic", sans-serif;
+  }
+}

@@ -1,0 +1,150 @@
+//ici on peut gerer dans informations personelles Les Deux bouttons (info perso et bancaire) les input et le boutton enregistrer
+
+// @font-face {
+//   font-family: Antic;
+//   src: url("../assets/fonts/AnticSlab-Regular.ttf");
+// }
+
+.user-info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .user-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+
+    .user-button {
+      width: 20vw;
+      height: 5vh;
+      font-size: 1.5vh;
+      font-family: "Antic", sans-serif;
+      color: var(--lightGreen);
+      text-transform: uppercase;
+      align-content: center;
+      background-color: transparent;
+      border: 1px solid var(--lightGreen);
+      padding: 10px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition:
+        transform 0.3s,
+        background-color 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &.active {
+        background-color: var(--lightGreen);
+        color: var(--darkPink);
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.line-user-info {
+  height: 1px;
+  background-color: var(--lightGreen);
+  width: 100%;
+}
+.user_form_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px;
+
+  .fist-last-name-input {
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  .city-cp-input {
+    margin-top: 1.5vh;
+    display: flex;
+    align-items: center;
+    gap: 1.5vw;
+  }
+  .phone-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    margin-top: 1.5vh;
+  }
+}
+.input-phone-info {
+  width: 60%;
+}
+
+.inputs-info {
+  font-family: "Antic", sans-serif;
+  color: var(--lightGreen);
+  font-weight: lighter;
+  text-transform: uppercase;
+  border: 1px solid var(--lightGreen);
+  background-color: var(--darkPink);
+  padding: 10px;
+  &:focus {
+    border: 2px solid var(--lightGreen);
+  }
+}
+
+.labels-info {
+  margin: 1.5vh;
+  font-family: "Antic", sans-serif;
+  color: var(--lightGreen);
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.input-email-info {
+  width: 80%;
+}
+
+.submit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-top: 10px;
+
+  .message {
+    margin: 1vh;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Antic", sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+
+    &.success-info {
+      color: var(--lightGreen);
+    }
+
+    &.error {
+      color: var(--pink);
+    }
+  }
+
+  .button-info-send {
+    margin-top: 10px;
+    background: var(--pink);
+    border: none;
+    padding: 20px 60px;
+    color: var(--lightGreen);
+    font-family: "Antic", sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--darkPink);
+      background: var(--lightGreen);
+    }
+  }
+}

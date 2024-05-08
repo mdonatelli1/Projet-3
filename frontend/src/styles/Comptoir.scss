@@ -1,0 +1,142 @@
+#comptoir {
+  /* POSITION */
+  position: relative;
+  text-align: center;
+
+  img {
+    /* POSITION */
+    margin-left: -25%;
+
+    // TAILLE
+    width: 66%;
+  }
+
+  #comptoir-container {
+    background-color: var(--darkPink);
+    border: 4px solid var(--lightGreen);
+    padding: 25px 12.5px;
+
+    // FLEX
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* POSITION */
+    position: absolute;
+    right: 33%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+
+    #comptoir-content {
+      background-color: var(--lightGreen);
+      padding: 50px 25px;
+
+      // TAILLE
+      width: 100%;
+
+      // FLEX
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      h2 {
+        background: linear-gradient(
+          180deg,
+          rgba(68, 35, 50, 1) 50%,
+          rgba(189, 201, 172, 1) 90%,
+          rgba(68, 35, 50, 1) 100%
+        );
+        background-clip: text;
+        color: transparent;
+
+        // POSITION
+        position: relative;
+
+        // FONT
+        font-size: clamp(20px, 2.083vw, 40px);
+        font-family: "AbhaBold", serif;
+
+        &::after {
+          content: "";
+          background-color: var(--darkPink);
+
+          // DISPLAY
+          display: block;
+
+          // TAILLE
+          width: 82%;
+          height: 2px;
+
+          // POSITION
+          position: absolute;
+          bottom: 0.1rem;
+          left: 50%;
+          transform: translate(-50%);
+        }
+      }
+
+      p {
+        color: var(--darkPink);
+
+        // POSITION
+        margin: 0 auto;
+
+        // FONT
+        font-size: clamp(11px, 1.146vw, 22px);
+        font-family: "Play", serif;
+
+        // TAILLE
+        max-width: 45ch;
+      }
+
+      button {
+        background-color: var(--pink);
+        border: none;
+        color: var(--lightGreen);
+        cursor: pointer;
+
+        // POSITION
+        margin: 0 auto;
+
+        // FONT
+        font-size: clamp(8px, 0.833vw, 16px);
+        font-family: "Antic", serif;
+
+        // FLEX
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // TAILLE
+        height: clamp(28.5px, 2.969vw, 57px);
+        width: clamp(96.5px, 10.052vw, 193px);
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media screen and (max-width: 740px) {
+  #comptoir {
+    img {
+      // POSITION
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+
+      // TAILLE
+      width: 100%;
+    }
+    #comptoir-container {
+      // POSITION
+      position: initial;
+      margin: 0 auto;
+      transform: translate(0);
+
+      // TAILLE
+      width: fit-content;
+    }
+  }
+}

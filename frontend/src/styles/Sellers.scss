@@ -1,0 +1,63 @@
+#sellers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .sellersContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  #mist {
+    position: absolute;
+    bottom: -10vh;
+  }
+
+  #branch1Sellers,
+  #branch2Sellers {
+    position: absolute;
+    transform: rotate(270deg);
+    top: 20vh;
+  }
+
+  #branch1Sellers {
+    left: 0;
+  }
+
+  #branch2Sellers {
+    transform: rotate(270deg) scaleY(-1);
+    right: 0;
+  }
+
+  @media screen and (max-width: 1400px) {
+    #branch1Sellers,
+    #branch2Sellers {
+      position: absolute;
+      transform: rotate(270deg);
+      top: 0vh;
+    }
+
+    #branch2Sellers {
+      transform: rotate(270deg) scaleY(-1);
+      right: 0;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
+    #mist {
+      position: absolute;
+      bottom: 10vh;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    #branch1Sellers,
+    #branch2Sellers {
+      display: none;
+    }
+  }
+}

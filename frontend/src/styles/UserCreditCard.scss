@@ -1,0 +1,132 @@
+//Ici on gere le formulaire de la CB
+
+// @font-face {
+//   font-family: Antic;
+//   src: url("../assets/fonts/AnticSlab-Regular.ttf");
+// }
+
+.card-container {
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.carte-paiement-container {
+  width: 50%;
+  min-width: 300px;
+  aspect-ratio: 4280/2699; /* taille reel cb = 8560 x 5398 */
+  border: 1px solid var(--lightGreen);
+  background: linear-gradient(180deg, #8d214c 0%, #df824d 100%);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  color: var(--lightGreen);
+  font-family: "Antic", sans-serif;
+  font-weight: lighter;
+
+  #card-title {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 0; // Ancré en haut
+    left: 0; // Ancré à gauche
+    margin: 1rem;
+  }
+
+  .carte-nom {
+    margin-top: 3vh;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  .carte-numero {
+    margin-top: 1vh;
+    font-size: 0.8rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .carte-expiration {
+    margin-top: 1vh;
+    font-size: 0.6rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .logo-visa {
+    position: absolute;
+    bottom: 0; // Ancré en bas
+    right: 0; // Ancré à droite
+    margin: 1rem;
+  }
+}
+
+.buttons-card {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bouton {
+  padding: 1rem;
+  border: 1px solid var(--lightGreen);
+  background-color: var(--darkPink);
+  color: var(--lightGreen);
+  font-family: "Antic", sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--lightGreen);
+    color: var(--darkPink);
+  }
+}
+
+.input-group {
+  margin: 0.5rem 0;
+
+  .labels-cb {
+    margin: 1.5vh;
+    font-family: "Antic", sans-serif;
+    color: var(--lightGreen);
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  .inputs-cb {
+    color: var(--lightGreen);
+    opacity: 0.8;
+    width: 100%;
+    background-color: var(--darkPink);
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--lightGreen);
+    margin-top: 0.25rem;
+  }
+}
+
+.cb-validate {
+  display: flex;
+  justify-content: flex-end;
+
+  .sauvegarder-btn {
+    background: var(--pink);
+    border: none;
+    padding: 20px 60px;
+    color: var(--lightGreen);
+    font-family: "Antic", sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--darkPink);
+      background: var(--lightGreen);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Dahlia",
+    "color": "#E2B95B",
+    "image": "Dalhia.svg"
+  },
+  {
+    "name": "Doireann",
+    "color": "#4E5C2C",
+    "image": "Doireann.svg"
+  },
+  {
+    "name": "Achlys",
+    "color": "#DF824D",
+    "image": "Achlys.svg"
+  },
+  {
+    "name": "Elya",
+    "color": "#8D214C",
+    "image": "Elya.svg"
+  }
+]

@@ -1,0 +1,119 @@
+// Container Card
+
+.containerD {
+  border: 1px #bdc9ac solid;
+  display: flex;
+  align-items: center;
+  color: #bdc9ac;
+  margin: 20px;
+  min-height: 150px;
+  justify-content: space-around;
+
+  // Date
+
+  .dateD {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-family: "Abha", sans-serif;
+    gap: 10px;
+    min-width: 35%;
+    text-align: center;
+
+    .numberD {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 2rem;
+      font-family: "Abha";
+
+      .month {
+        font:
+          1.438rem "AbhaReg",
+          sans-serif;
+        margin: 0 8px;
+      }
+    }
+  }
+  // Line
+
+  .lineD {
+    background-color: #bdc9ac;
+    height: 100px;
+    width: 2px;
+    margin: 0 3rem;
+  }
+
+  .locaD {
+    display: flex;
+    flex-direction: column;
+
+    .placeD {
+      font-family: "Play", sans-serif;
+      font-size: 1.25rem;
+    }
+
+    .adressD {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      .logoD {
+        width: 25px;
+        height: 31px;
+      }
+
+      .textD {
+        font-family: "Play", sans-serif;
+        font-size: 0.75rem;
+        max-width: 70%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .dateD {
+      min-width: 35%;
+
+      .numberD {
+        font-size: 1.5rem;
+        flex-direction: column;
+
+        .month {
+          font:
+            1rem "AbhaReg",
+            sans-serif;
+          margin: 0 8px;
+        }
+      }
+    }
+    .locaD {
+      scale: 0.8;
+    }
+
+    .lineD {
+      margin: 0 0;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    margin: 1rem 0;
+
+    .dateD {
+      min-width: 35%;
+
+      .numberD {
+        font-size: 1rem;
+        flex-direction: column;
+      }
+    }
+    .locaD {
+      scale: 0.7;
+    }
+
+    .lineD {
+      margin: 0 0;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.modal-cmd-container {
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.modal-cmd-content,
+.overlay-cmd {
+  padding: 14px 28px;
+  max-width: 900px;
+  min-width: 850px;
+  min-height: 180px;
+  max-height: 500px;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  margin: 0;
+  font-size: 15px;
+  font-family: "Antic", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: var(--pink);
+  color: var(--lightGreen);
+
+  .modal-cmd-title {
+    color: var(--lightGreen);
+    font-family: "Antic", sans-serif;
+    margin-bottom: 20px;
+  }
+  overflow-x: auto; /* Permet le défilement horizontal mais affiche le scrollbar que si nécessaire */
+  overflow-y: auto;
+  scrollbar-color: var(--darkPink) var(--lightGreen); /* thumb and track */
+  scrollbar-width: thin; /* 'auto' | 'thin' | 'none' */
+  /* Style du scrollbar */
+  .modal-cmd-content::-webkit-scrollbar {
+    width: 10px; /* Largeur du scrollbar */
+  }
+
+  /* Style de la piste du scrollbar */
+  .modal-cmd-content::-webkit-scrollbar-track {
+    background: var(--lightGreen); /* Couleur de fond de la piste */
+  }
+
+  /* Style du curseur du scrollbar */
+  .modal-cmd-content::-webkit-scrollbar-thumb {
+    background: var(--darkPink); /* Couleur du curseur */
+  }
+
+  /* Au survol du curseur du scrollbar */
+  .modal-cmd-content::-webkit-scrollbar-thumb:hover {
+    background: #b30000; /* Couleur au survol, vous pouvez l'ajuster */
+  }
+  .modal-text-cmd {
+    display: flex;
+    flex-direction: row;
+
+    .title-cmd-cont {
+      display: flex;
+      flex-direction: column;
+      margin-right: 20px;
+    }
+
+    .modal-cmd-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-right: 20px;
+    }
+    .titles-cmd {
+      font-weight: 900;
+    }
+
+    .titles-cmd-commande {
+      font-size: larger;
+      text-decoration: underline;
+    }
+  }
+  .btn-cmd {
+    padding: 5px 20px;
+    border: none;
+    color: var(--darkPink);
+    background-color: var(--lightGreen);
+  }
+}

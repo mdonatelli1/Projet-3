@@ -1,0 +1,97 @@
+.festival {
+  display: flex;
+  flex-direction: row;
+  border: 5px solid #bdc9ac;
+  padding: 10px;
+  width: 90%;
+  margin: 5rem auto;
+  position: relative;
+
+  #branch1Fest {
+    position: absolute;
+    left: -36px;
+    top: -40px;
+    z-index: 1;
+  }
+
+  .festival-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .principal-box {
+      color: #bdc9ac;
+      border: 2px solid #bdc9ac;
+      text-align: center;
+      font-family: Abha;
+      display: flex;
+      align-items: center;
+      width: 40%;
+      aspect-ratio: 50/50;
+      padding: 3rem;
+
+      h1 {
+        font-size: 3.438rem;
+      }
+    }
+
+    .dates-box {
+      color: #bdc9ac;
+      border: 2px solid #bdc9ac;
+      margin-left: 0;
+      height: 100%;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .festival-container {
+      flex-direction: column;
+      width: 100%;
+
+      .principal-box {
+        width: 100%;
+        aspect-ratio: initial;
+        justify-content: center;
+
+        h1 {
+          font-size: 2.5rem;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    #branch1Fest {
+      scale: 0.8;
+      top: -65px;
+      left: -60px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 100%;
+
+    #branch1Fest {
+      display: none;
+    }
+
+    .festival-container {
+      flex-direction: column;
+      width: 100%;
+
+      .principal-box {
+        width: 100%;
+        aspect-ratio: initial;
+        justify-content: center;
+        padding: 10px;
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

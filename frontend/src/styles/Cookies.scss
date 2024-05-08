@@ -1,0 +1,148 @@
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
+}
+
+.modal,
+.overlay {
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  backdrop-filter: blur(1px);
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.modal-content {
+  z-index: 100;
+  margin: 0;
+  font-size: 15px;
+  font-family: "Play", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: var(--pink);
+  color: var(--yellow);
+  padding: 14px 28px;
+  max-width: 900px;
+  min-width: 850px;
+  min-height: 180px;
+  max-height: 500px;
+}
+
+.forgotCo {
+  color: var(--lightGreen);
+}
+
+.noAcc {
+  color: var(--lightGreen);
+}
+
+.titleCo {
+  text-align: center;
+  color: var(--yellow);
+}
+
+.modalText {
+  margin-top: 18px;
+  width: 70%;
+}
+
+.close-modal {
+  margin-left: 20em;
+  margin-bottom: 15px;
+  width: 250px;
+  border: 1px solid var(--yellow);
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 1em;
+  font-family: "Antic", sans-serif;
+
+  &:hover {
+    background-color: var(--yellow);
+    border: 1px solid var(--pink);
+    color: var(--pink);
+  }
+}
+
+.cookie {
+  top: 2em;
+  left: 42em;
+  position: absolute;
+  min-width: 175px;
+  min-height: 175px;
+  max-width: 175px;
+  max-height: 175px;
+}
+
+.bolder {
+  margin-top: 15px;
+  font-weight: 800;
+}
+
+.modalContainer {
+  display: flex;
+  gap: 5em;
+}
+
+.goToBreak {
+  visibility: hidden;
+}
+
+.italicBold {
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 835px) {
+  .modal-content {
+    min-width: 50%;
+    max-width: 75%;
+    height: 50%;
+    top: 47%;
+    position: fixed;
+    font-size: 12px;
+  }
+
+  .modalText {
+    margin-top: 18px;
+    width: 100%;
+  }
+
+  .modalContainer {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .close-modal {
+    margin: 0em auto;
+  }
+
+  .cookie {
+    position: relative;
+    left: 33%;
+    top: 0em;
+    margin-bottom: 2em;
+    min-width: 125px;
+    min-height: 125px;
+    max-width: 125px;
+    max-height: 125px;
+  }
+}

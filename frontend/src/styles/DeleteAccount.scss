@@ -1,0 +1,99 @@
+.formDelAccount {
+  max-width: 600px;
+  max-height: 600px;
+  padding: 5px 30px;
+
+  .titleDel {
+    background-color: var(--lightGreen);
+    color: var(--darkPink);
+    text-align: center;
+    width: fit-content;
+    padding: 15px 90px;
+    text-transform: uppercase;
+    font-family: "Antic", serif;
+  }
+
+  .lineDelAccount {
+    margin: 30px 0px;
+    height: 1px;
+    background-color: var(--lightGreen);
+    width: 100%;
+  }
+  .deleteForm {
+    display: flex;
+    flex-direction: column;
+
+    .labelPassDel {
+      margin: 1.5vh;
+      font-family: "Antic", sans-serif;
+      color: var(--lightGreen);
+      font-weight: lighter;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .passwordValidDelete {
+      font-family: "Antic", sans-serif;
+      color: var(--lightGreen);
+      font-weight: lighter;
+      border: 1px solid var(--lightGreen);
+      background-color: var(--darkPink);
+      padding: 10px;
+    }
+
+    &:focus {
+      border: 1px solid var(--lightGreen);
+    }
+  }
+  .toggle-passwordDelAcc {
+    width: 20%;
+    padding: 3px;
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: var(--lightGreen);
+    background-color: var(--lightGreen);
+    color: var(--darkPink);
+    margin: 1.5vh;
+
+    &:hover {
+      border-color: var(--lightGreen);
+      color: var(--lightGreen);
+      background: var(--darkPink);
+    }
+    &:focus {
+      border: 1px solid var(--lightGreen);
+    }
+  }
+  .ButtDelContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .ButtDelAcc {
+      width: 90%;
+      margin: 20px 0px;
+      background: var(--pink);
+      border: none;
+      padding: 10px 20px;
+      color: var(--lightGreen);
+      font-family: "Antic", sans-serif;
+      font-weight: lighter;
+      text-transform: uppercase;
+      font-size: 1em;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--darkPink);
+        background: var(--lightGreen);
+      }
+    }
+  }
+  .messageDelAcc {
+    top: 57%;
+    position: absolute;
+    font-size: 16px;
+    font-family: "Antic", sans-serif;
+    color: var(--lightGreen);
+    font-weight: lighter;
+    text-transform: uppercase;
+  }
+}
